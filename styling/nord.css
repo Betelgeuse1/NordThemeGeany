@@ -96,7 +96,7 @@ tab.reorderable-page:checked {
 }
 
 tab.reorderable-page {
-	color: #ECEFF4;
+	color: #4C566A;
 	background: #2E3440;
 }
 
@@ -110,7 +110,7 @@ window:dir(ltr) {
 
 /* Edited and not saved documents */
 #geany-document-status-changed {
-	color: #3A7587;
+	color: #8FBCBB;
 }
 
 header.left > tabs > tab:checked, header.top > tabs > tab:checked {
@@ -123,5 +123,9 @@ menuitem:hover {
 
 button > widget > box > label {
 	color: #88C0D0;
+}
+
+infobar > revealer > box {
+	color: #ECEFF4;
 }
 
