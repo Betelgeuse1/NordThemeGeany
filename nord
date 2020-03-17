@@ -12,7 +12,7 @@ help="Nord Theme Geany installation options:
     
     README: ${link}"
 
-if [ ! -f ./nord.conf ] && [ ! -f ./nord.css ]; then
+if [ ! -f ./styling/nord.conf ] && [ ! -f ./styling/nord.css ]; then
 	echo "Required files are missing inside the current folder"
 	exit 1
 fi
@@ -30,7 +30,7 @@ fi
 
 # Add the nord theme config file to the geany colorschemes folder
 echo "Adding the nord theme to the available geany themes"
-cat nord.conf > ~/.config/geany/colorschemes/nord.conf
+cat ./styling/nord.conf > ~/.config/geany/colorschemes/nord.conf
 echo # \n
 
 # Make a copy of the current geany.css file 
@@ -39,7 +39,7 @@ if [ $# -ne 0 ] && ([ $1 = "-g" ] || [ $1 = "--gtk" ]); then
 	echo "Save the current geany.css file into old_geany.css"
 	mv ~/.config/geany/geany.css ~/.config/geany/old_geany.css
 	echo "Copy nord.css to geany.css"
-	cat nord.css > ~/.config/geany/geany.css
+	cat ./styling/nord.css > ~/.config/geany/geany.css
 	echo # \n
 fi
 
