@@ -1,0 +1,40 @@
+#!/bin/bash
+
+help="Nord Theme Geany installation options:
+    usage: ./nord\t\tOnly install the nord theme (conf file) for Geany
+    usage: ./nord -g | --gtk\tInstall the nord GTK theme for Geany and the nord theme (conf file)
+    usage: ./nord -h | --help\tShow this help
+
+    -g, --gtk\t\tInstall the nord GTK theme for Geany
+    -h, --help\t\tShow this help"
+    
+link="https://github.com/Betelgeuse1/NordThemeGeany/blob/master/README.md"
+
+if [ ! -f ./nord.conf ] && [ ! -f ./nord.css ]; then
+	echo "Required files are missing inside the current folder"
+	exit 1
+fi
+
+if [ ! -e ~/.config/geany/colorschemes ]; then
+	echo "Creating a colorschemes folder inside ~/.config/geany"
+	mkdir ~/.config/geany/colorschemes
+	echo # \n
+fi
+
+# Add the nord theme config file to the geany colorschemes folder
+echo "Adding the nord theme to the available geany themes"
+cat nord.conf > ~/.config/geany/colorschemes/nord.conf
+echo # \n
+
+# Make a copy of the current geany.css file 
+# and install the nord.css file
+if [ $# -ne 0 ] && ([ $1 = "-g" ] || [ $1 = "--gtk" ]); then
+	echo "Save the current geany.css file into old_geany.css"
+	mv ~/.config/geany/geany.css ~/.config/geany/old_geany.css
+	echo "Copy nord.css to geany.css"
+	cat nord.css > ~/.config/geany/geany.css
+	echo # \n
+fi
+
+echo "Everything is finished, you just need to select the right theme in Geany"
+echo "See ${link} for help"

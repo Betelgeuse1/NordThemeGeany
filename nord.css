@@ -1,0 +1,127 @@
+/* custom GTK3 CSS for Geany */
+
+/* make close button on the editor's tabs smaller */
+#geany-close-tab-button {
+	padding: 0;
+}
+#geany-close-tab-button GtkImage /* GTK < 3.20 */,
+#geany-close-tab-button image /* GTK >= 3.20 */ {
+	padding: 0;
+}
+
+/* use monospaced font in search entries for easier reading of regexp (#1907117) */
+#GeanyDialogSearch GtkEntry /* GTK < 3.20 */,
+#GeanyDialogSearch entry /* GTK >= 3.20 */ {
+	font-family: monospace;
+}
+
+/* set red background for GtkEntries showing unmatched searches */
+#geany-search-entry-no-match {
+	color: #fff;
+	background: #ff6666;
+}
+#geany-search-entry-no-match:selected /* GTK < 3.20 */,
+#geany-search-entry-no-match selection /* GTK >= 3.20 */ {
+	background-color: #771111;
+}
+
+/* document status colors */
+#geany-document-status-changed {
+	color: #ff0000;
+}
+#geany-document-status-disk-changed {
+	color: #ff7f00;
+}
+#geany-document-status-readonly {
+	color: #007f00;
+}
+
+/* compiler message colors */
+#geany-compiler-error {
+    color: #ff0000;
+}
+#geany-compiler-context {
+    color: #7f0000;
+}
+#geany-compiler-message {
+    color: #0000D0;
+}
+
+/* red "Terminal" label when terminal dirty */
+#geany-terminal-dirty {
+	color: #ff0000;
+}
+
+/* ===== Custom GTK Style for Geany ======= */
+/*
+	Polar night palette 
+		nord0: #2E3440;
+		nord1: #3B4252;
+		nord2: #434C5E;
+		nord3: #4C566A;
+	Snow storm palette
+		nord4: #D8DEE9;
+		nord5: #E5E9F0;
+		nord6: #ECEFF4;
+	Frost palette
+		nord7: #8FBCBB;
+		nord8: #88C0D0;
+		nord9: #81A1C1;
+		nord10: #5E81AC;
+	Aurora palette
+		nord11: #BF616A;
+		nord12: #D08770;
+		nord13: #EBCB8B;
+		nord14: #A3BE8C;
+		nord15: #B48EAD;
+*/
+#GeanyMenubar, box.horizontal:dir(ltr):nth-child(4), widget > button, widget > box > box > box > button, treeview > header > button {
+	background: #3B4252;
+}
+
+#GeanyToolbar, viewport, treeview, scrollbar, widget, header, textview>text, window>menu, revealer>box {
+	background: #2E3440;
+}
+
+dialog, notebook:dir(ltr).frame, notebook:dir(ltr).frame > stack:dir(ltr), header.left > tabs, box > toolbar {
+	background: #2E3440;
+	border-color: #2E3440;
+}
+
+tab.reorderable-page:checked {
+	background: #434C5E;
+	border-bottom-color: #5E81AC;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+tab.reorderable-page {
+	color: #ECEFF4;
+	background: #2E3440;
+}
+
+tab.reorderable-page:hover {
+	background: #3B4252;
+}
+
+window:dir(ltr) {
+	background: #2E3440;
+}
+
+/* Edited and not saved documents */
+#geany-document-status-changed {
+	color: #3A7587;
+}
+
+header.left > tabs > tab:checked, header.top > tabs > tab:checked {
+	border-color: #5E81AC;
+}
+
+menuitem:hover {
+	box-shadow: 0 -2px #5E81AC inset;
+}
+
+button > widget > box > label {
+	color: #88C0D0;
+}
+
