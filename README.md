@@ -46,6 +46,6 @@ A homemade version of the [Nord theme][nordlink] for geany.
 [nordconfM]: images/nordconfM.png
 [nordconfCS]: images/nordconfCS.png
 
-[gtknord]: images/gtknord.png
+[gtknord]: images/gtknordmain.png
 [gtknordmenu]: images/gtknordmenu.png
 [gtknordfile]: images/gtknordfile.png
