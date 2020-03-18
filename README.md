@@ -2,18 +2,25 @@
 A homemade version of the [Nord theme][nordlink] for geany.
 
 ## Installation
-Simply run the following command to only install the editor theme.  
-`$ ./nord`
+Simply run the following command to only install the [editor theme](#nord-theme).  
+```sh
+$ ./nord
+```
 
-If you want to go full Nord style, you can install the GTK theme too.  
-`$ ./nord --gtk`  
+After running the command, you just need to change your theme in geany  
+![Changing theme explanation][geanythemechange]  
 
-Running this command will save your old geany.css file as old_geany.css,  
-inside your geany config folder if you ever want to go back to normal.
+If you want to go full Nord style, you can install the [GTK theme](#gtk-theme) too.  
+```sh
+$ ./nord --gtk
+```  
+
+Running this command will save your old geany.css file as old_geany.css inside your geany config folder,
+if you ever feel like going back to normal, or trying other themes.
 
 ## Appearance  
 * ### Nord theme
-	Some example of how the theme looks with different languages.  
+	Some examples of how the theme looks with different languages.  
 	
 	##### C  
 	![Nord theme image C][nordconfC]
@@ -35,25 +42,28 @@ inside your geany config folder if you ever want to go back to normal.
 	![Nord theme image CSS][nordconfCS]
 	
 * #### GTK theme
-	Main window  
+	A really big pcture of what the main windows look like with the GTK theme enable
+	##### Main window  
 	![GTK main window appearance][gtknord]  
 	
 	---  
-	Preferences window  
+	##### Preferences window  
 	![GTK menu window appearance][gtknordmenu]  
 	
 	---  
-	File upload window  
+	##### File upload window  
 	![GTK file upload window appearance][gtknordfile]
 
 ### TO-DOs
 - [x] Implement the basic Nord Theme, following the official [colors & palettes][caplink]
 - [x] Implement the basic GTK theme
-- [ ] Finish the GTK theme completely
-- [ ] Try to make the theme more vscode like
+- [ ] Polish the GTK theme look
+- [ ] Try to make the theme more adaptative to languages
 
 [nordlink]: https://www.nordtheme.com/
 [caplink]: https://www.nordtheme.com/docs/colors-and-palettes
+
+[geanythemechange]: images/geanythemechange.png
 
 [nordconfC]: images/nordconfC.png
 [nordconfP]: images/nordconfP.png
