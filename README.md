@@ -2,7 +2,7 @@
 A homemade version of the [Nord theme][nordlink] for geany.
 
 ## Installation
-Simply run the following command to only install the [editor theme](#nord-theme).  
+Simply run the following command to install the [editor theme](#nord-theme).  
 ```sh
 $ ./nord
 ```
@@ -15,12 +15,12 @@ If you want to go full Nord style, you can install the [GTK theme](#gtk-theme) t
 $ ./nord --gtk
 ```  
 
-Running this command will save your old geany.css file as old_geany.css inside your geany config folder,
+Running this command will save your previous geany.css file as old_geany.css inside the geany config folder,
 if you ever feel like going back to normal, or trying other themes.
 
 ## Appearance  
 * ### Nord theme
-	Some examples of how the theme looks with different languages.  
+	Some examples of how the theme looks with different programming languages.  
 	
 	##### C  
 	![Nord theme image C][nordconfC]
@@ -42,7 +42,7 @@ if you ever feel like going back to normal, or trying other themes.
 	![Nord theme image CSS][nordconfCS]
 	
 * #### GTK theme
-	A really big pcture of what the main windows look like with the GTK theme enable
+	A really big pcture of what the main window looks like with the GTK theme enabled
 	##### Main window  
 	![GTK main window appearance][gtknord]  
 	
